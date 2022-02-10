@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Image Classification Application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<Body background="static/image.jpg" />
+
+  <h1 class="display-4" style="text-align:center"><strong>Car Image Classfication Dashboard</strong></h1>
+  <br><br>
+  <p class="lead" style="text-align:center">An application to distinguish between different type of car models <strong>DODGE</strong> and <strong>CHEVROLET</strong>.</p>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Please Upload Image:</label>
+      <div class="col-sm-5">          
+        <input type="file" class="form-control"  name="my_image" id="pwd">
+      </div>
+    </div>
+	<div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Show Me the Result</button>
+      </div>
+    </div>
+	<p class="lead" style="text-align:left">Instructions:</p>
+	<ol>
+	  <li>Please Select the image using Choose File Button</li>
+	  <li>Click on the Show Result Button to view the prediction result</li>
+	</ol> 
+	
+  </form>
+  
+  	{% if prediction %}
+	<p class="lead" style="text-align:center">
+		<img src="{{img_path}}" height="400px" width="400px" class="center">
+		<h4> <center>The Car type is  : <i> {{prediction}} </i></center></h4>
+	</p>
+	{% endif %}
+
+
+</div>
+</body>
+</html>
