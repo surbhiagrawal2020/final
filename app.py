@@ -2,8 +2,7 @@ from flask import Flask, render_template, request
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
-import tensorflow as tf
-from tensorflow import keras
+
 import cv2
 from PIL import Image
 import base64
@@ -39,5 +38,3 @@ def get_output():
 if __name__ =='__main__':
  #   app.debug = True
     app.run(debug= False)
-    
-    
