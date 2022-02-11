@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'finalim'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B9A0C2C85ADC4A02AF53DFECE571B618 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5120EE8C90DF4D9FB1E24F4F2B975FEA }}
